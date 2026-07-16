@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kedai STMJ Nusantara Loa Gagak</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#1b1b1b;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#ff9800;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff9800;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:60px;
+color:#ff9800;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+background:#ff9800;
+color:white;
+font-size:18px;
+border-radius:50px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#ff9800;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about p{
+line-height:1.8;
+font-size:18px;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#222;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
+box-shadow:0 10px 20px rgba(0,0,0,.4);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:22px;
+color:#ff9800;
+margin:15px 0;
+font-weight:bold;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+transition:.3s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.testimonial{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.testi{
+background:#222;
+padding:25px;
+border-radius:15px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+font-size:20px;
+margin:15px;
+}
+
+footer{
+background:#000;
+padding:30px;
+text-align:center;
+margin-top:50px;
+}
+
+.topBtn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:50px;
+height:50px;
+border-radius:50%;
+font-size:22px;
+display:none;
+}
+
+.dark{
+background:white;
+color:#111;
+}
+
+.dark header{
+background:white;
+}
+
+.dark nav a{
+color:black;
+}
+
+.dark .card,
+.dark .testi{
+background:#f2f2f2;
+color:black;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">☕ Kedai STMJ</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#about">Tentang</a>
+<a href="#menu">Menu</a>
+<a href="#gallery">Galeri</a>
+<a href="#contact">Kontak</a>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>STMJ Asli Nusantara Loa Gagak</h1>
+
+<p>
+Susu • Telur • Madu • Jahe
+Hangat, Nikmat, dan Menyehatkan
+</p>
+
+<button onclick="document.getElementById('menu').scrollIntoView()">
+Lihat Menu
+</button>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">Tentang Kami</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=900&q=80">
+
+<div>
+
+<p>
+
+Kedai STMJ Nusantara Loa Gagak hadir untuk menghadirkan minuman tradisional
+berkualitas menggunakan bahan alami terbaik.
+
+Jahe merah pilihan, susu segar, telur kampung, dan madu asli
+dipadukan menjadi minuman sehat yang cocok dinikmati kapan saja.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="menu">
+
+<h2 class="title">Menu Favorit</h2>
+
+<div class="menu-grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>STMJ Original</h3>
+
+<p>Jahe merah + susu + telur + madu</p>
+
+<div class="price">Rp18.000</div>
+
+<button>Beli</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Bandrek</h3>
+
+<p>Bandrek hangat khas Sunda</p>
+
+<div class="price">Rp20.000</div>
+
+<button>Beli</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Kopi Jahe</h3>
+
+<p>Kopi hitam premium dengan jahe</p>
+
+<div class="price">Rp22.000</div>
+
+<button>Beli</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="title">Galeri</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Testimoni</h2>
+
+<div class="testimonial">
+
+<div class="testi">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+STMJ terenak yang pernah saya coba.
+
+</p>
+
+<b>- Andi</b>
+
+</div>
+
+<div class="testi">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+Tempat nyaman dan pelayanan cepat.
+
+</p>
+
+<b>- Budi</b>
+
+</div>
+
+<div class="testi">
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+Harga terjangkau dan rasanya mantap.
+
+</p>
+
+<b>- Rina</b>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="title">Hubungi Kami</h2>
+
+<p>📍 Samarinda, Kalimantan Timur</p>
+
+<p>📞 0822-5150-7374</p>
+
+<p>🕒 Buka Setiap Hari 16.00 - 23.00</p>
+
+<button onclick="wa()">
+
+Pesan via WhatsApp
+
+</button>
+
+<br><br>
+
+<button onclick="darkMode()">
+
+Dark / Light Mode
+
+</button>
+
+</section>
+
+<footer>
+
+© 2026 Kedai STMJ Nusantara Loa Gagak By alwanfjn 
+
+</footer>
+
+<button class="topBtn" id="topBtn">
+
+↑
+
+</button>
+
+<script>
+
+function wa(){
+
+window.open(
+"https://wa.me/6282251507374?text=Halo%20Kedai%20STMJ,%20saya%20ingin%20memesan."
+)
+
+}
+
+function darkMode(){
+
+document.body.classList.toggle("dark")
+
+}
+
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+}
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+})
+
+}
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.boxShadow="0 15px 30px rgba(255,152,0,.5)";
+
+})
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.boxShadow="0 10px 20px rgba(0,0,0,.4)";
+
+})
+
+})
+
+</script>
+
+</body>
+</html>
